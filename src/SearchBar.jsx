@@ -1,12 +1,36 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 const SearchBar = () => {
+
+    const [search, setSearch] = useState('');
+    const [location, setLocation] = useState('');
+    const [selected, setSelected] = useState(null);
+
+    const handleSelect = (e) => {
+        setSelected(e.target.value);
+    }
+
+    
+
+    
     return (
         <div className="search-bar">
             <div className="search-bar-sort">
-                <button className="sort-btn">Best Match</button>
-                <button className="sort-btn">Highest Rated</button>
-                <button className="sort-btn">Most Reviewed</button>
+                <button 
+                    className={`sort-btn ${selected === 'best_match' && 'active'}`}
+                    onClick={handleSelect} 
+                    value="best_match">Best Match
+                </button>
+                <button 
+                    className={`sort-btn ${selected === 'rating' && 'active'}`} 
+                    onClick={handleSelect} 
+                    value="rating">Highest Rated
+                </button>
+                <button 
+                    className={`sort-btn ${selected === 'review-count' && 'active'}`} 
+                    onClick={handleSelect} 
+                    value="review-count">Most Reviewed
+                </button>
             </div>
             <form className="form-content">
                 <div className="form-inputs">
