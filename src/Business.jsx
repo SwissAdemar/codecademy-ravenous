@@ -1,5 +1,5 @@
 import React from "react"
-import businessData from "./businessData";
+
 
 const Business = ({data}) => {
     return (
