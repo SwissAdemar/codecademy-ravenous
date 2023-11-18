@@ -61,11 +61,9 @@ img {
 
 .search-bar-sort {
     display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: space-around;
     width: 500px;
-    border-bottom: 1px solid #eee;
-    padding-bottom: .5rem;
 }
 
 .sort-btn {
@@ -74,11 +72,12 @@ img {
     background: none;
     font-size: 20px;
     cursor: pointer;
-    width: 100px;
     color: #eee;
     line-height: 1.3rem;
     letter-spacing: 1px;
     font-weight: bold;
+    border-bottom: 1px solid white;
+    padding: 1rem 2rem;
 }
 
 .submit-btn {
@@ -152,7 +151,7 @@ img {
     grid-template-columns: repeat(3, 1fr);
     place-items: center;
     width: 1200px;
-    margin: 5rem 0;
+    padding: 5rem 0;
 }
 
 #card-title {
@@ -188,4 +187,13 @@ img {
 .upper {
     text-transform: uppercase;
     font-size: 18px;
+}
+
+.test {
+    color: red;
+}
+
+.active, .sort-btn:hover {
+    color:rgb(211, 131, 26);
+    border-color:rgb(211, 131, 26);
 }
