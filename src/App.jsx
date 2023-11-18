@@ -1,7 +1,5 @@
 import React from "react";
-import businessData from "./businessData";
 import SearchBar from "./SearchBar";
-import Business from "./Business";
 import BusinessList from "./BusinessList";
 
 
@@ -14,13 +12,7 @@ const App = () => {
                 <SearchBar />
             </div>
             <div className="cards-wrapper">
-                <Business />
-                <Business />
-                <Business />
-                <Business />
-                <Business />
-                <Business />
-               
+                <BusinessList />
             </div>
         </>
     )
