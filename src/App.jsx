@@ -1,6 +1,7 @@
 import React from "react";
 import SearchBar from "./SearchBar";
 import BusinessList from "./BusinessList";
+import businessData from "./businessData";
 
 
 
@@ -12,7 +13,7 @@ const App = () => {
                 <SearchBar />
             </div>
             <div className="cards-wrapper">
-                <BusinessList />
+                <BusinessList businessData={businessData}/>
             </div>
         </>
     )
