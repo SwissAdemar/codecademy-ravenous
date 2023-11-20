@@ -1,10 +1,7 @@
 import React, {useState} from "react";
 import SearchBar from "./SearchBar";
 import BusinessList from "./BusinessList";
-import businessData from "./businessData";
 import searchBusiness from "./utils/yelp";
-
-
 
 const App = () => {
 
