@@ -6,7 +6,7 @@ const Business = ({data}) => {
         <div className="business-card">
             <img src={data.imageSrc}
             alt={data.name} />
-            <div class="card-content">
+            <div className="card-content">
                 <h2 id="card-title">{data.name}</h2>
                 <div className="card-desc">
                     <p>{data.address}</p>
