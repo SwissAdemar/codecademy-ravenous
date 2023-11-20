@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
 
-const SearchBar = () => {
 
+const SearchBar = ({searchBusiness}) => {
+
+    
     const [search, setSearch] = useState('');
     const [location, setLocation] = useState('');
     const [selected, setSelected] = useState(null);
@@ -20,7 +22,7 @@ const SearchBar = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(`Searching Yelp with ${search}, ${location}, ${selected}`);
+        searchBusiness(search, location, selected);
     }
 
     
