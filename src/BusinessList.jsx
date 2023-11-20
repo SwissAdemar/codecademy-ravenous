@@ -1,9 +1,9 @@
 import React from "react";
 import Business from "./Business";
 
-const BusinessList = ({businessData}) => {
-    
-    return businessData.map(data => <Business data={data} />)
+const BusinessList = ({businessesData}) => {
+
+    return businessesData.map(data => <Business key={data.id} data={data} />)
 }
 
 export default BusinessList;
