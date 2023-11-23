@@ -4,39 +4,31 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
 }
 
 body {
     font-size: 10px;
     font-family: 'Poppins', sans-serif;
     letter-spacing: 1px;
-}
-
-img {
-    width: 100%;
-    min-height: 100%;
-    object-fit: cover;
+   
 }
 
 #root {
     width: 100%;
     min-height: 100vh;
     display: grid;
-    place-items: center;
-    
+    justify-items: center;
 }
 
 /* -------------------NAVBAR------------------------- */
 
 .nav-bar {
-    border: 1px solid black;
     width: 100%;
     height: 500px;
+;
 }
 
 .nav-title {
-    width: 100%;
     background: rgb(18, 18, 24);
     height: 70px;
     display: flex;
@@ -53,9 +45,9 @@ img {
     background-size: cover;
     height: calc(100% - 70px);
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     gap: 2rem;
 }
 
@@ -63,7 +55,7 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 500px;
+    max-width: 500px;
 }
 
 .sort-btn {
@@ -129,28 +121,34 @@ img {
 
 .business-card {
     width: 300px;
-    max-height: 400px;
-    display: flex;
-    flex-direction: column;
-    margin-top: 2rem;
+    height: 400px;
+    display: grid;
+    grid-template-rows: 3fr 1fr;
+    margin-top: 3rem;
     overflow: hidden;
     border-radius: 5px;
     transition: .3s all;
 }
 
-.business-card:hover {
-    transform: perspective(90rem) rotateX(20deg) scale(1.2);
-    background: white;
-    box-shadow: 0 0 10px black;
-    padding: 1rem;
-    
+
+
+.img-container {
+    width: 100%;
+    min-height: 100%;
+}
+
+.card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .cards-wrapper {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     place-items: center;
-    width: 1200px;
+    max-width: 1200px;
+    gap: 4rem;
     padding: 5rem 0;
 }
 
@@ -161,13 +159,13 @@ img {
 
 .card-desc {
     display: grid;
-    grid-template-columns: 2fr 1fr;
-    align-items: center;
-    font-size: 14px;
-    height: 100%;
-    
+    grid-template-rows: repeat(3, 1fr);
 }
 
+.failed-match {
+    position: absolute;
+    font-size: 20px;
+}
 
 /* ------------------------ADDITIONAL-------------------------- */
 
@@ -186,14 +184,56 @@ img {
 
 .upper {
     text-transform: uppercase;
-    font-size: 18px;
+    font-size: 16px;
 }
 
-.test {
-    color: red;
-}
 
 .active, .sort-btn:hover {
     color:rgb(211, 131, 26);
     border-color:rgb(211, 131, 26);
+}
+
+.desc-wrapper {  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+}
+
+@media screen and (max-width: 599px){
+    .cards-wrapper {
+        grid-template-columns: 1fr !important;
+    }
+    .failed-match {
+        font-size: 18px;
+    }
+    .form-content {
+        width: calc(100% - 100px);
+    }
+    
+    .sort-btn {
+        font-size: 20px;
+        
+        padding: .1rem .25rem;
+    
+    }
+
+    .form-inputs {
+        flex-direction: column;
+        
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 765px){
+    .cards-wrapper {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .form-content {
+        width: calc(100% - 150px);
+    }
+
+    .form-inputs {
+        align-self: center;
+    }
 }
