@@ -1,8 +1,28 @@
-# React + Vite
+# Completed 'Ravenous' project provided by Codecademy
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Objectives 
+Build a website that would generate list of recommended restaurants depending on provided details
 
-Currently, two official plugins are available:
+## Technologies Used
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- HTML
+- CSS
+- JavaScript
+- React
+- Git/GitHub
+- Yelp API
+
+## Features
+
+- Generate restaurants list recommendation using Yelp API
+- Sort the list based on user's preferences:
+    - Best Match
+    - Highest Rated
+    - Most Reviewed
+- Search restaurants by its location and the type of food being served there
+
+## Links
+
+Check it out yourself [here](https://swissademar.github.io/codecademy-ravenous)
+Unfortunately to use this app, the user must get temporary access to the CORS demo.
+I can be done through [this](https://cors-anywhere.herokuapp.com/corsdemo) website.
