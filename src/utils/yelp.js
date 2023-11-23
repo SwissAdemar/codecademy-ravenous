@@ -9,7 +9,7 @@ const searchBusiness = async (term, location, sortBy, apiKey) => {
     try {
         const response = await fetch(urlToFetch, {
             headers: {
-                'Authorization': apiKey   
+                'Authorization': apiKey,
             }
         });
 
@@ -29,7 +29,6 @@ const searchBusiness = async (term, location, sortBy, apiKey) => {
                         reviewCount: business.review_count
                     }
             })
-            
         }
     }
     catch(error){
