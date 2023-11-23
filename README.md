@@ -1,7 +1,7 @@
 # Completed 'Ravenous' project provided by Codecademy
 
 ## Objectives 
-Build a website that would generate list of recommended restaurants depending on provided details
+Build a website that would generate list of recommended restaurants depending on provided details.
 
 ## Technologies Used
 
@@ -23,6 +23,6 @@ Build a website that would generate list of recommended restaurants depending on
 
 ## Links
 
-Check it out yourself [here](https://swissademar.github.io/codecademy-ravenous)
+Check it out yourself [here](https://swissademar.github.io/codecademy-ravenous).
 Unfortunately to use this app, the user must get temporary access to the CORS demo.
-I can be done through [this](https://cors-anywhere.herokuapp.com/corsdemo) website.
+It can be done through [this](https://cors-anywhere.herokuapp.com/corsdemo) website.
