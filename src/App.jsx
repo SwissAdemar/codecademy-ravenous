@@ -11,7 +11,11 @@ const App = () => {
     const searchYelp = async (term, location, sortBy) => {
         const apiKey = import.meta.env.VITE_API_KEY;
         const businesses = await searchBusiness(term, location, sortBy, apiKey);
-        setBusinessesData(businesses);
+        if(businesses){
+            setBusinessesData(businesses)
+        } else {
+            setBusinessesData('No items match the description.')
+        }
     };
 
     return (

@@ -1,20 +1,32 @@
 import React from "react"
 
 
-const Business = ({data}) => {
+const Business = ({data, onFailure}) => {
+    if(!data){
+        return <div className="failed-match">{onFailure}</div>
+    }
     return (
         <div className="business-card">
-            <img src={data.imageSrc}
-            alt={data.name} />
+            <div className="img-container">
+                <img src={data.imageSrc}
+                alt={data.name}
+                className="card-img" />
+            </div>
             <div className="card-content">
                 <h2 id="card-title">{data.name}</h2>
                 <div className="card-desc">
-                    <p>{data.address}</p>
-                    <p className="align-right highlight upper">{data.category}</p>
-                    <p>{data.city}</p>
-                    <p className="align-right highlight">{data.rating} stars</p>
-                    <p>{`${data.state} ${data.zipCode}`}</p>
-                    <p className="align-right ">{data.reviewCount} reviews</p>
+                    <div className="desc-wrapper">
+                        <p>{data.address}</p>
+                        <p className="highlight upper">{data.category}</p>
+                    </div>
+                    <div className="desc-wrapper">
+                        <p>{data.city}</p>
+                        <p className="highlight">{data.rating} stars</p>
+                    </div>
+                    <div className="desc-wrapper">
+                        <p>{`${data.state} ${data.zipCode}`}</p>
+                        <p className="">{data.reviewCount} reviews</p>
+                    </div>
                 </div>
             </div>
         </div>
