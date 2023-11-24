@@ -6,7 +6,5 @@ import dotenv from 'dotenv'
 export default defineConfig({
   plugins: [react()],
   base: '/codecademy-ravenous/',
-  define: {
-    'process.env.VITE_API_KEY':JSON.stringify(process.env.VITE_API_KEY)
-  }
+  
 })

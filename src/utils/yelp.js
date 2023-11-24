@@ -1,6 +1,6 @@
 const yelpBaseUrl = 'https://api.yelp.com/v3';
 
-const searchBusiness = async (term, location, sortBy, apiKey) => {
+const searchBusiness = async (term, location, sortBy) => {
     const corsOverride = 'https://cors-anywhere.herokuapp.com/';
     const searchEndpoint = '/businesses/search';
     const queryParams = `?term=${term}&location=${location}&sort_by=${sortBy}&limit=18`;
@@ -9,7 +9,7 @@ const searchBusiness = async (term, location, sortBy, apiKey) => {
     try {
         const response = await fetch(urlToFetch, {
             headers: {
-                'Authorization': apiKey,
+                'Authorization': `Bearer ${import.meta.env.VITE_API_KEY}`,
             }
         });
 
